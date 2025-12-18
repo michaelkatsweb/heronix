@@ -1,9 +1,7 @@
 /**
-* Template Name: FlexBiz
-* Template URL: https://bootstrapmade.com/flexbiz-bootstrap-business-template/
-* Updated: Aug 04 2025 with Bootstrap v5.3.7
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Heronix Education Systems LLC
+* Copyright © 2025 Heronix Education Systems LLC
+* All rights reserved.
 */
 
 (function() {

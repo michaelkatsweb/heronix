@@ -1,6 +1,5 @@
-Thanks for downloading this template!
+Heronix Education Systems LLC Website
 
-Template Name: FlexBiz
-Template URL: https://bootstrapmade.com/flexbiz-bootstrap-business-template/
-Author: BootstrapMade.com
-License: https://bootstrapmade.com/license/
+Website: Heronix Education Systems LLC
+Copyright © 2025 Heronix Education Systems LLC
+All rights reserved.
