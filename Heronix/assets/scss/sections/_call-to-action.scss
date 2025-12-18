@@ -1,0 +1,473 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Call To Action Section
+--------------------------------------------------------------*/
+.call-to-action {
+  padding: 100px 0;
+
+  .cta-wrapper {
+    position: relative;
+
+    .content-block {
+      background-color: var(--surface-color);
+      border-radius: 16px;
+      padding: 5rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 4px 40px color-mix(in srgb, var(--default-color), transparent 96%),
+        0 1px 0 color-mix(in srgb, var(--accent-color), transparent 94%);
+    }
+  }
+
+  .text-content {
+    position: relative;
+    z-index: 2;
+
+    .section-label {
+      display: inline-block;
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: var(--accent-color);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+      position: relative;
+
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 40px;
+        height: 2px;
+        background: var(--accent-color);
+      }
+    }
+
+    h2 {
+      font-size: 3.25rem;
+      font-weight: 300;
+      color: var(--heading-color);
+      line-height: 1.15;
+      margin-bottom: 2rem;
+
+      .accent-text {
+        color: var(--accent-color);
+        font-weight: 400;
+        display: block;
+      }
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: color-mix(in srgb, var(--default-color), transparent 20%);
+      line-height: 1.8;
+      margin-bottom: 2.5rem;
+      max-width: 90%;
+    }
+  }
+
+  .benefits-list {
+    margin-bottom: 2.5rem;
+
+    .benefit-row {
+      display: flex;
+      gap: 2rem;
+      margin-bottom: 1rem;
+
+      .benefit-item {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        flex: 1;
+
+        .check-icon {
+          width: 24px;
+          height: 24px;
+          background: color-mix(in srgb, var(--accent-color), transparent 90%);
+          color: var(--accent-color);
+          border-radius: 50%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 0.75rem;
+          flex-shrink: 0;
+        }
+
+        span {
+          font-size: 0.95rem;
+          color: var(--heading-color);
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  .action-group {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 3rem;
+
+    .btn {
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      font-weight: 500;
+
+      &.btn-primary-action {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        padding: 1rem 2rem;
+        border: none;
+        font-size: 1rem;
+        box-shadow: 0 8px 24px color-mix(in srgb, var(--accent-color), transparent 85%);
+
+        &:hover {
+          background: color-mix(in srgb, var(--accent-color), black 10%);
+          transform: translateY(-2px);
+          box-shadow: 0 12px 32px color-mix(in srgb, var(--accent-color), transparent 80%);
+        }
+      }
+
+      &.btn-text-link {
+        background: transparent;
+        color: var(--default-color);
+        border: none;
+        padding: 0;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        font-size: 1rem;
+
+        &:hover {
+          color: var(--accent-color);
+        }
+
+        i {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .trust-indicators {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+
+    .indicator {
+      text-align: center;
+
+      .metric {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--heading-color);
+        line-height: 1;
+        margin-bottom: 0.25rem;
+      }
+
+      .label {
+        font-size: 0.85rem;
+        color: color-mix(in srgb, var(--default-color), transparent 40%);
+        font-weight: 400;
+      }
+    }
+
+    .separator {
+      width: 1px;
+      height: 40px;
+      background: color-mix(in srgb, var(--default-color), transparent 85%);
+    }
+  }
+
+  .visual-section {
+    position: relative;
+
+    .image-container {
+      position: relative;
+      z-index: 2;
+
+      .main-visual {
+        width: 100%;
+        border-radius: 12px;
+        max-width: 480px;
+      }
+
+      .floating-badge {
+        position: absolute;
+        background: var(--surface-color);
+        border-radius: 12px;
+        padding: 1rem 1.25rem;
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        box-shadow:
+          0 8px 32px color-mix(in srgb, var(--default-color), transparent 92%),
+          0 0 0 1px color-mix(in srgb, var(--accent-color), transparent 92%);
+        z-index: 3;
+
+        .badge-icon {
+          width: 40px;
+          height: 40px;
+          background: linear-gradient(135deg,
+              var(--accent-color),
+              color-mix(in srgb, var(--accent-color), transparent 20%));
+          color: var(--contrast-color);
+          border-radius: 8px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 1.1rem;
+        }
+
+        .badge-text {
+          .badge-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--heading-color);
+            line-height: 1;
+            margin-bottom: 0.25rem;
+          }
+
+          .badge-subtitle {
+            font-size: 0.8rem;
+            color: color-mix(in srgb, var(--default-color), transparent 35%);
+            font-weight: 400;
+          }
+        }
+
+        &.badge-1 {
+          top: 10%;
+          left: -20px;
+          animation: floatSlow 6s ease-in-out infinite;
+        }
+
+        &.badge-2 {
+          bottom: 15%;
+          right: -30px;
+          animation: floatFast 4s ease-in-out infinite;
+        }
+      }
+    }
+
+    .decorative-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 1;
+
+      .element {
+        position: absolute;
+        border-radius: 50%;
+
+        &.element-1 {
+          width: 120px;
+          height: 120px;
+          background: linear-gradient(135deg,
+              color-mix(in srgb, var(--accent-color), transparent 92%),
+              color-mix(in srgb, var(--accent-color), transparent 98%));
+          top: -10%;
+          right: 20%;
+          animation: drift 8s ease-in-out infinite;
+        }
+
+        &.element-2 {
+          width: 80px;
+          height: 80px;
+          background: linear-gradient(225deg,
+              color-mix(in srgb, var(--heading-color), transparent 90%),
+              color-mix(in srgb, var(--heading-color), transparent 98%));
+          bottom: -5%;
+          left: 10%;
+          animation: drift 6s ease-in-out infinite reverse;
+        }
+
+        &.element-3 {
+          width: 60px;
+          height: 60px;
+          background: linear-gradient(45deg,
+              color-mix(in srgb, var(--accent-color), transparent 88%),
+              color-mix(in srgb, var(--accent-color), transparent 96%));
+          top: 50%;
+          left: -5%;
+          animation: drift 10s ease-in-out infinite;
+        }
+      }
+    }
+  }
+
+  @keyframes floatSlow {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(-8px) translateX(4px);
+    }
+  }
+
+  @keyframes floatFast {
+
+    0%,
+    100% {
+      transform: translateY(0) translateX(0);
+    }
+
+    50% {
+      transform: translateY(6px) translateX(-3px);
+    }
+  }
+
+  @keyframes drift {
+
+    0%,
+    100% {
+      transform: translate(0, 0) rotate(0deg);
+    }
+
+    33% {
+      transform: translate(10px, -8px) rotate(120deg);
+    }
+
+    66% {
+      transform: translate(-5px, 12px) rotate(240deg);
+    }
+  }
+
+  @media (max-width: 992px) {
+    padding: 80px 0;
+
+    .content-block {
+      padding: 3.5rem 2.5rem;
+    }
+
+    .text-content {
+      margin-bottom: 3rem;
+
+      h2 {
+        font-size: 2.5rem;
+
+        .accent-text {
+          display: inline;
+        }
+      }
+
+      p {
+        max-width: 100%;
+      }
+    }
+
+    .action-group {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.5rem;
+
+      .btn.btn-primary-action {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .trust-indicators {
+      justify-content: space-between;
+      gap: 1rem;
+
+      .separator {
+        display: none;
+      }
+    }
+
+    .floating-badge {
+      &.badge-1 {
+        left: 0;
+        top: 5%;
+      }
+
+      &.badge-2 {
+        right: 0;
+        bottom: 10%;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    padding: 60px 0;
+
+    .content-block {
+      padding: 2.5rem 1.5rem;
+    }
+
+    .text-content {
+      h2 {
+        font-size: 2rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+    }
+
+    .benefits-list {
+      .benefit-row {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+    }
+
+    .trust-indicators {
+      .indicator {
+        .metric {
+          font-size: 1.25rem;
+        }
+
+        .label {
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    .floating-badge {
+      padding: 0.75rem 1rem;
+
+      .badge-icon {
+        width: 32px;
+        height: 32px;
+        font-size: 0.9rem;
+      }
+
+      .badge-text {
+        .badge-title {
+          font-size: 0.9rem;
+        }
+
+        .badge-subtitle {
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    .decorative-elements .element {
+      transform: scale(0.7);
+
+      &.element-1 {
+        top: -5%;
+        right: 10%;
+      }
+
+      &.element-2 {
+        bottom: 0;
+        left: 5%;
+      }
+
+      &.element-3 {
+        display: none;
+      }
+    }
+  }
+}

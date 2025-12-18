@@ -1,0 +1,307 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Features Section
+--------------------------------------------------------------*/
+.features {
+  /* Custom properties for quick theming */
+  --card-radius: 18px;
+  --shadow-soft: 0 10px 30px color-mix(in srgb, var(--default-color), transparent 88%);
+  --shadow-hover: 0 16px 44px color-mix(in srgb, var(--default-color), transparent 82%);
+  --ring-color: color-mix(in srgb, var(--accent-color), transparent 75%);
+  --muted: color-mix(in srgb, var(--default-color), transparent 35%);
+
+  .intro-panel {
+    background: linear-gradient(180deg, var(--surface-color), color-mix(in srgb, var(--accent-color), transparent 96%));
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+    border-radius: 22px;
+    padding: 28px;
+    box-shadow: var(--shadow-soft);
+
+    .preview-visual {
+      position: relative;
+
+      img {
+        display: block;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        inset: -10px -8px auto auto;
+        width: 120px;
+        height: 120px;
+        background: radial-gradient(closest-side, color-mix(in srgb, var(--accent-color), transparent 65%), transparent 70%);
+        filter: blur(12px);
+        border-radius: 50%;
+        pointer-events: none;
+      }
+    }
+
+    .intro-content {
+      .intro-title {
+        font-weight: 800;
+        margin-bottom: 8px;
+      }
+
+      .intro-text {
+        color: var(--muted);
+        margin: 0;
+      }
+
+      .intro-highlights {
+        li {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          padding: 8px 0;
+
+          i {
+            color: var(--accent-color);
+            font-size: 18px;
+          }
+        }
+      }
+
+      .cta-btn {
+        background: var(--accent-color);
+        color: var(--contrast-color);
+        border-radius: 999px;
+        padding: 10px 18px;
+        box-shadow: 0 6px 22px color-mix(in srgb, var(--accent-color), transparent 70%);
+        transition: 0.3s;
+
+        &:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 28px color-mix(in srgb, var(--accent-color), transparent 60%);
+          color: var(--contrast-color);
+        }
+      }
+
+      .link-btn {
+        color: var(--accent-color);
+        border-radius: 999px;
+        padding: 10px 14px;
+        background: color-mix(in srgb, var(--accent-color), transparent 94%);
+        transition: 0.3s;
+
+        &:hover {
+          background: color-mix(in srgb, var(--accent-color), transparent 90%);
+          color: var(--accent-color);
+          transform: translateY(-2px);
+        }
+      }
+    }
+  }
+
+  .feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+
+    @media (max-width: 1200px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (max-width: 576px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .feature-item {
+    position: relative;
+    background: var(--surface-color);
+    border: 1px solid color-mix(in srgb, var(--default-color), transparent 92%);
+    border-radius: var(--card-radius);
+    padding: 22px 18px 20px 18px;
+    box-shadow: var(--shadow-soft);
+    transition: 0.3s;
+    overflow: hidden;
+
+    &:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
+      border-color: color-mix(in srgb, var(--accent-color), transparent 70%);
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, color-mix(in srgb, var(--accent-color), transparent 96%), transparent 100%);
+      opacity: 0.8;
+      pointer-events: none;
+    }
+
+    .f-icon {
+      width: 54px;
+      height: 54px;
+      border-radius: 14px;
+      display: grid;
+      place-items: center;
+      margin-bottom: 14px;
+      color: var(--contrast-color);
+      box-shadow: 0 6px 18px color-mix(in srgb, var(--default-color), transparent 85%);
+
+      i {
+        font-size: 22px;
+      }
+    }
+
+    .f-body {
+      .f-title {
+        font-size: 18px;
+        font-weight: 800;
+        margin-bottom: 6px;
+      }
+
+      .f-text {
+        color: var(--muted);
+        margin-bottom: 10px;
+        line-height: 1.6;
+        font-size: 15px;
+      }
+
+      .f-meta {
+        span {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          font-size: 13px;
+          padding: 6px 10px;
+          border-radius: 999px;
+          background: color-mix(in srgb, var(--accent-color), transparent 94%);
+          color: color-mix(in srgb, var(--default-color), transparent 20%);
+          border: 1px solid var(--ring-color);
+        }
+      }
+    }
+  }
+
+  /* Icon badge palettes via color-mix on accent for harmony */
+  .badge-blue {
+    background: color-mix(in srgb, var(--accent-color), #5dade2 40%);
+  }
+
+  .badge-green {
+    background: color-mix(in srgb, var(--accent-color), #2ecc71 45%);
+  }
+
+  .badge-purple {
+    background: color-mix(in srgb, var(--accent-color), #9b59b6 40%);
+  }
+
+  .badge-orange {
+    background: color-mix(in srgb, var(--accent-color), #f39c12 40%);
+  }
+
+  .badge-cyan {
+    background: color-mix(in srgb, var(--accent-color), #48c9b0 40%);
+  }
+
+  .badge-pink {
+    background: color-mix(in srgb, var(--accent-color), #e91e63 35%);
+  }
+
+  .assurance-banner {
+    margin-top: 22px;
+    background: linear-gradient(90deg, color-mix(in srgb, var(--accent-color), transparent 92%), var(--surface-color));
+    border: 1px dashed color-mix(in srgb, var(--default-color), transparent 80%);
+    border-radius: 16px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    .assurance-icon {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      background: color-mix(in srgb, var(--accent-color), transparent 86%);
+      color: var(--accent-color);
+
+      i {
+        font-size: 20px;
+      }
+    }
+
+    .assurance-content {
+      flex: 1;
+
+      h5 {
+        margin: 0 0 4px 0;
+        font-weight: 800;
+      }
+
+      p {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+      }
+    }
+
+    .banner-btn {
+      background: var(--accent-color);
+      color: var(--contrast-color);
+      border-radius: 999px;
+      padding: 8px 14px;
+      white-space: nowrap;
+      transition: 0.3s;
+
+      &:hover {
+        transform: translateX(2px);
+        color: var(--contrast-color);
+        box-shadow: 0 8px 24px color-mix(in srgb, var(--accent-color), transparent 65%);
+      }
+    }
+  }
+
+  /* Swiper global fix if a slider is later embedded */
+  .swiper-wrapper {
+    height: auto !important;
+  }
+
+  @media (max-width: 992px) {
+    .intro-panel {
+      padding: 24px;
+
+      .intro-content .intro-title {
+        font-size: 24px;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .intro-panel {
+      .preview-visual::after {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .feature-item {
+      padding: 18px 16px;
+
+      .f-icon {
+        width: 50px;
+        height: 50px;
+
+        i {
+          font-size: 20px;
+        }
+      }
+    }
+
+    .assurance-banner {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .banner-btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}

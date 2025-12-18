@@ -1,0 +1,119 @@
+// main: ../main.scss
+/*--------------------------------------------------------------
+# Global Header
+--------------------------------------------------------------*/
+.header {
+  color: var(--default-color);
+  background-color: var(--background-color);
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0 0 0;
+  border-bottom: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+
+  .top-row {
+    padding-bottom: 10px;
+
+    .logo {
+      text-decoration: none;
+
+      img {
+        max-height: 40px;
+        margin-right: 10px;
+      }
+
+      .sitename {
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--heading-color);
+        font-family: var(--heading-font);
+        margin: 0;
+      }
+    }
+  }
+
+  .social-links {
+    a {
+      color: var(--heading-color);
+      padding: 0 8px;
+      display: inline-block;
+      font-size: 18px;
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      padding-right: 40px;
+    }
+  }
+
+  .search-form {
+    position: relative;
+    width: 250px;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+
+    .form-control {
+      border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+      padding: 7px 40px 7px 15px;
+      background: transparent;
+      transition: 0.3s;
+      color: var(--default-color);
+      font-size: 14px;
+
+      &::placeholder {
+        color: color-mix(in srgb, var(--default-color), transparent 70%);
+      }
+
+      &:focus {
+        border-color: var(--accent-color);
+        box-shadow: none;
+      }
+    }
+
+    button {
+      position: absolute;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      border: 0;
+      background: none;
+      font-size: 16px;
+      padding: 0 15px;
+      margin: 0;
+      color: var(--heading-color);
+      transition: 0.3s;
+
+      &:hover {
+        color: var(--accent-color);
+      }
+    }
+
+    @media (max-width: 1200px) {
+      display: none;
+    }
+  }
+
+  .nav-wrap {
+    background-color: color-mix(in srgb, var(--default-color), transparent 96%);
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .mobile-nav-toggle {
+    position: fixed;
+    top: 20px;
+    right: 5px;
+  }
+}
+
+/* Global Header on Scroll
+------------------------------*/
+.scrolled .header {
+  --background-color: #ffffff;
+}
