@@ -5,8 +5,8 @@
   * The library should be uploaded to: vendor/php-email-form/php-email-form.php
   */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+  // Replace with your real receiving email address
+  $receiving_email_address = 'info@heronixedu.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
