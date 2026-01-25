@@ -1877,11 +1877,10 @@
           </div>
 
           <div class="col-lg-7">
-            <form name="contact" method="POST" action="/thank-you.html" data-netlify="true" netlify-honeypot="bot-field" class="contact-form" data-aos="fade-up" data-aos-delay="200">
-              <input type="hidden" name="form-name" value="contact">
-              <p class="d-none">
-                <label>Don't fill this out if you're human: <input name="bot-field"></label>
-              </p>
+            <!-- Update YOUR_FORM_ID with your Formspree form ID from https://formspree.io -->
+            <form method="POST" action="https://formspree.io/f/YOUR_FORM_ID" class="contact-form" data-aos="fade-up" data-aos-delay="200">
+              <input type="hidden" name="_next" value="https://heronixedu.com/thank-you.html">
+              <input type="hidden" name="_subject" value="New Contact from Heronix Website">
               <div class="row gy-4">
 
                 <div class="col-md-6">
