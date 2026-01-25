@@ -2,11 +2,15 @@
   /**
   * Contact form handler for Heronix Education Systems LLC
   * Requires the "PHP Email Form" library
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
+  *
+  * SETUP INSTRUCTIONS:
+  * 1. Copy this file to contact.php
+  * 2. Replace the placeholder values below with your actual credentials
+  * 3. contact.php is in .gitignore and won't be committed
   */
 
   // Replace with your real receiving email address
-  $receiving_email_address = 'info@heronixedu.com';
+  $receiving_email_address = 'your-email@example.com';
 
   if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
     include( $php_email_form );
@@ -16,21 +20,19 @@
 
   $contact = new PHP_Email_Form;
   $contact->ajax = true;
-  
+
   $contact->to = $receiving_email_address;
   $contact->from_name = $_POST['name'];
   $contact->from_email = $_POST['email'];
   $contact->subject = $_POST['subject'];
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
+  // SMTP Configuration - Update with your credentials
   $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
+    'host' => 'smtp.example.com',           // Your SMTP host
+    'username' => 'your-email@example.com', // Your SMTP username
+    'password' => 'your-app-password',      // Your SMTP password or app password
+    'port' => '587'                         // Usually 587 (TLS) or 465 (SSL)
   );
-  */
 
   $contact->add_message( $_POST['name'], 'From');
   $contact->add_message( $_POST['email'], 'Email');
