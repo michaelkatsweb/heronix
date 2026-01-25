@@ -1,0 +1,25 @@
+# Robots.txt for Heronix Education Systems
+# https://heronixedu.netlify.app
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://heronixedu.netlify.app/sitemap.xml
+
+# Disallow template/utility pages
+Disallow: /starter-page.html
+Disallow: /portfolio-details.html
+Disallow: /service-details.html
+Disallow: /thank-you.html
+Disallow: /forms/
+
+# Allow all major search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
