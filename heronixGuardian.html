@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <title>Guardian Security Perimeter - Zero-Trust Student Data Protection</title>
-  <meta name="description" content="Guardian Security Perimeter provides cryptographic tokenization to protect student PII from third-party vendor breaches. When Canvas gets hacked, your students' data stays safe.">
+  <meta name="description" content="Guardian Security Perimeter provides cryptographic tokenization to protect student PII from third-party vendor breaches. When vendors get hacked, your students' data stays safe.">
   <meta name="keywords" content="Guardian Security, zero-trust, student data protection, tokenization, FERPA compliance, vendor breach protection, data security">
 
   <!-- Favicons -->
@@ -92,7 +92,7 @@
               </div>
               <div class="content">
                 <h1 class="display-4 fw-bold mb-4">Guardian Security Perimeter</h1>
-                <p class="lead mb-4">Zero-Trust Protection Against Vendor Breaches. When Canvas gets hacked, your students' data stays safe. Cryptographic tokenization replaces student PII before data leaves your network.</p>
+                <p class="lead mb-4">Zero-Trust Protection Against Vendor Breaches. When third-party vendors get hacked, your students' data stays safe. Cryptographic tokenization replaces student PII before data leaves your network.</p>
                 <div class="d-flex flex-wrap gap-3 justify-content-center">
                   <a href="#how-it-works" class="btn btn-primary-ghost">
                     <span>How It Works</span>
@@ -171,9 +171,9 @@
               <h4>External Zone</h4>
               <p class="text-muted">Internet / Third-Party Vendors</p>
               <ul class="list-unstyled text-start mt-3">
-                <li><i class="bi bi-arrow-right text-muted me-2"></i>Canvas LMS (tokenized)</li>
-                <li><i class="bi bi-arrow-right text-muted me-2"></i>Google Classroom (tokenized)</li>
-                <li><i class="bi bi-arrow-right text-muted me-2"></i>NWEA Assessment (tokenized)</li>
+                <li><i class="bi bi-arrow-right text-muted me-2"></i>LMS Vendors (tokenized)</li>
+                <li><i class="bi bi-arrow-right text-muted me-2"></i>Classroom Tools (tokenized)</li>
+                <li><i class="bi bi-arrow-right text-muted me-2"></i>Assessment Vendors (tokenized)</li>
                 <li><i class="bi bi-arrow-right text-muted me-2"></i>Parent Portal (tokenized)</li>
               </ul>
             </div>
@@ -240,18 +240,18 @@
           <div class="col-lg-6">
             <div class="token-cards">
               <div class="token-card p-3 mb-3 rounded" style="background: #e3f2fd; border-left: 4px solid #2196f3;">
-                <h5 class="mb-2"><i class="bi bi-mortarboard me-2"></i>Canvas LMS</h5>
-                <p class="mb-1"><small>Student ID:</small> <code>CNVS_7H4K9D2X</code></p>
+                <h5 class="mb-2"><i class="bi bi-mortarboard me-2"></i>LMS Vendor</h5>
+                <p class="mb-1"><small>Student ID:</small> <code>LMS_7H4K9D2X</code></p>
                 <p class="mb-0"><small>Name:</small> "Emily R." | <small>Grade:</small> "A"</p>
               </div>
               <div class="token-card p-3 mb-3 rounded" style="background: #e8f5e9; border-left: 4px solid #4caf50;">
-                <h5 class="mb-2"><i class="bi bi-google me-2"></i>Google Classroom</h5>
-                <p class="mb-1"><small>Student ID:</small> <code>GCLS_3M8P5K1Q</code></p>
+                <h5 class="mb-2"><i class="bi bi-book me-2"></i>Classroom Vendor</h5>
+                <p class="mb-1"><small>Student ID:</small> <code>CLS_3M8P5K1Q</code></p>
                 <p class="mb-0"><small>Name:</small> "E. Rodriguez" | <small>Grade:</small> "B+"</p>
               </div>
               <div class="token-card p-3 rounded" style="background: #fff3e0; border-left: 4px solid #ff9800;">
-                <h5 class="mb-2"><i class="bi bi-bar-chart me-2"></i>NWEA Assessment</h5>
-                <p class="mb-1"><small>Student ID:</small> <code>NWEA_6N2H9L4X</code></p>
+                <h5 class="mb-2"><i class="bi bi-bar-chart me-2"></i>Assessment Vendor</h5>
+                <p class="mb-1"><small>Student ID:</small> <code>ASM_6N2H9L4X</code></p>
                 <p class="mb-0"><small>Name:</small> "E. R." | <small>Score:</small> "245"</p>
               </div>
             </div>
@@ -263,8 +263,8 @@
             <div class="breach-scenario p-4 rounded-4" style="background: linear-gradient(135deg, #dc3545 0%, #c82333 100%); color: white;">
               <div class="row align-items-center">
                 <div class="col-lg-8">
-                  <h4><i class="bi bi-exclamation-octagon me-2"></i>Canvas Suffers Data Breach</h4>
-                  <p class="mb-0">Attackers steal Canvas database containing: <code>CNVS_7H4K9D2X</code>, "Emily R.", Grade: "A"</p>
+                  <h4><i class="bi bi-exclamation-octagon me-2"></i>LMS Vendor Suffers Data Breach</h4>
+                  <p class="mb-0">Attackers steal vendor database containing: <code>LMS_7H4K9D2X</code>, "Emily R.", Grade: "A"</p>
                 </div>
                 <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
                   <span class="badge bg-light text-dark p-2">Tokens Only - No Real PII</span>
@@ -293,8 +293,8 @@
                 </div>
                 <div class="col-md-4">
                   <ul class="list-unstyled">
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Google data (uses GCLS_* tokens)</li>
-                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>NWEA data (uses NWEA_* tokens)</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Classroom data (uses CLS_* tokens)</li>
+                    <li><i class="bi bi-check-circle-fill text-success me-2"></i>Assessment data (uses ASM_* tokens)</li>
                   </ul>
                 </div>
               </div>
