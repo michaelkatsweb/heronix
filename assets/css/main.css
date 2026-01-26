@@ -31,6 +31,61 @@
 }
 
 /*--------------------------------------------------------------
+# Announcement Banner
+--------------------------------------------------------------*/
+.announcement-banner {
+  background: linear-gradient(90deg, #ffc107 0%, #ff9800 100%);
+  color: #1a1a1a;
+  padding: 10px 0;
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.announcement-banner .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.announcement-banner span {
+  display: inline-flex;
+  align-items: center;
+}
+
+.announcement-banner a {
+  color: #1a1a1a;
+  font-weight: 600;
+  text-decoration: none;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 4px 12px;
+  border-radius: 20px;
+  transition: background 0.3s ease;
+}
+
+.announcement-banner a:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.announcement-banner a i {
+  margin-left: 5px;
+}
+
+@media (max-width: 576px) {
+  .announcement-banner {
+    font-size: 0.8rem;
+    padding: 8px 10px;
+  }
+
+  .announcement-banner .container {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Font & Color Variables
 --------------------------------------------------------------*/
 /* Fonts */
