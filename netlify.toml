@@ -1,0 +1,15 @@
+[build]
+  publish = "."
+
+# Edge function for geo-blocking
+[[edge_functions]]
+  function = "geo-block"
+  path = "/*"
+
+# Custom headers for security
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
