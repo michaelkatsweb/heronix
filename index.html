@@ -952,19 +952,23 @@
               <div class="row gy-4">
 
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <label for="contact-name" class="visually-hidden">Your Name</label>
+                  <input type="text" id="contact-name" name="name" class="form-control" placeholder="Your Name" required aria-required="true">
                 </div>
 
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="col-md-6">
+                  <label for="contact-email" class="visually-hidden">Your Email</label>
+                  <input type="email" id="contact-email" class="form-control" name="email" placeholder="Your Email" required aria-required="true">
                 </div>
 
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <label for="contact-subject" class="visually-hidden">Subject</label>
+                  <input type="text" id="contact-subject" class="form-control" name="subject" placeholder="Subject" required aria-required="true">
                 </div>
 
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <label for="contact-message" class="visually-hidden">Message</label>
+                  <textarea id="contact-message" class="form-control" name="message" rows="6" placeholder="Message" required aria-required="true"></textarea>
                 </div>
 
                 <div class="col-md-12 text-center">

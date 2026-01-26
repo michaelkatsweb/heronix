@@ -7,10 +7,7 @@ Allow: /
 # Sitemap location
 Sitemap: https://heronixedu.netlify.app/sitemap.xml
 
-# Disallow template/utility pages
-Disallow: /starter-page.html
-Disallow: /portfolio-details.html
-Disallow: /service-details.html
+# Disallow utility pages
 Disallow: /thank-you.html
 Disallow: /forms/
 
