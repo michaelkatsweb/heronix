@@ -55,6 +55,8 @@
 
 <body class="index-page">
 
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
@@ -62,9 +64,10 @@
           <h1 class="sitename">Heronix Education Systems</h1>
         </a>
         <div class="d-flex align-items-center">
-          <form class="search-form">
-            <input type="text" placeholder="Search..." class="form-control">
-            <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+          <form class="search-form" role="search" aria-label="Site search">
+            <label for="site-search" class="visually-hidden">Search website</label>
+            <input type="text" id="site-search" placeholder="Search..." class="form-control">
+            <button type="submit" class="btn" aria-label="Submit search"><i class="bi bi-search" aria-hidden="true"></i></button>
           </form>
         </div>
       </div>
@@ -95,13 +98,13 @@
             <li><a href="pricing.html" class="active">Pricing</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <button class="mobile-nav-toggle d-xl-none" aria-label="Toggle navigation menu" aria-expanded="false"><i class="bi bi-list" aria-hidden="true"></i></button>
         </nav>
       </div>
     </div>
   </header>
 
-  <main class="main">
+  <main id="main-content" class="main">
 
     <!-- Page Title -->
     <section class="page-title section dark-background">
@@ -233,9 +236,9 @@
               <table class="table table-borderless mb-0">
                 <thead>
                   <tr>
-                    <th>Module</th>
-                    <th class="text-end">License</th>
-                    <th class="text-end">Support/yr</th>
+                    <th scope="col">Module</th>
+                    <th scope="col" class="text-end">License</th>
+                    <th scope="col" class="text-end">Support/yr</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -268,9 +271,9 @@
               <table class="table table-borderless mb-0">
                 <thead>
                   <tr>
-                    <th>Module</th>
-                    <th class="text-end">License</th>
-                    <th class="text-end">Support/yr</th>
+                    <th scope="col">Module</th>
+                    <th scope="col" class="text-end">License</th>
+                    <th scope="col" class="text-end">Support/yr</th>
                   </tr>
                 </thead>
                 <tbody>

@@ -55,6 +55,8 @@
 
 <body class="index-page">
 
+  <a href="#main-content" class="skip-to-main">Skip to main content</a>
+
   <header id="header" class="header sticky-top">
     <div class="container-fluid container-xl position-relative">
       <div class="top-row d-flex align-items-center justify-content-between">
@@ -62,9 +64,10 @@
           <h1 class="sitename">Heronix Education Systems</h1>
         </a>
         <div class="d-flex align-items-center">
-          <form class="search-form">
-            <input type="text" placeholder="Search..." class="form-control">
-            <button type="submit" class="btn"><i class="bi bi-search"></i></button>
+          <form class="search-form" role="search" aria-label="Site search">
+            <label for="site-search" class="visually-hidden">Search website</label>
+            <input type="text" id="site-search" placeholder="Search..." class="form-control">
+            <button type="submit" class="btn" aria-label="Submit search"><i class="bi bi-search" aria-hidden="true"></i></button>
           </form>
         </div>
       </div>
@@ -95,13 +98,13 @@
             <li><a href="pricing.html">Pricing</a></li>
             <li><a href="index.html#contact">Contact</a></li>
           </ul>
-          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+          <button class="mobile-nav-toggle d-xl-none" aria-label="Toggle navigation menu" aria-expanded="false"><i class="bi bi-list" aria-hidden="true"></i></button>
         </nav>
       </div>
     </div>
   </header>
 
-  <main class="main">
+  <main id="main-content" class="main">
 
     <!-- Product Hero Section -->
     <section id="product-hero" class="hero section dark-background">
@@ -221,7 +224,7 @@
 
           <div class="col-lg-6" data-aos="fade-left" data-aos-delay="400">
             <div class="benefit-item d-flex align-items-start p-4 bg-white rounded-4 shadow-sm h-100">
-              <i class="bi bi-plug" text-info me-3" style="font-size: 2rem;"></i>
+              <i class="bi bi-plug text-info me-3" style="font-size: 2rem;" aria-hidden="true"></i>
               <div>
                 <h4>Simple Integration</h4>
                 <p class="mb-0">Other Heronix products automatically detect Hub tokens. No complex SAML or OAuth configuration required.</p>
